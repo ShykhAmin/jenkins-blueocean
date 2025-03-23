@@ -14,10 +14,16 @@ pipeline {
       }
     }
 
-    stage('Deploy') {
+    stage('Deploy on test') {
       steps {
         echo 'Deploying the Project'
         sh 'echo "deploying the project"'
+      }
+    }
+
+    stage('Deploy on prod') {
+      steps {
+        sh 'echo "deploying on prod"'
       }
     }
 
