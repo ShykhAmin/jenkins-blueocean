@@ -3,7 +3,9 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh 'echo "Testing the Project"'
+        sh '''echo "Testing the Project"
+mvn --version'''
+        tool(name: 'Maven', type: 'Maven')
       }
     }
 
